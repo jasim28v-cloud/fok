@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الحدث 24 | النسخة المطورة</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --glass-bg: rgba(255, 255, 255, 0.07);
+            --glass-border: rgba(255, 255, 255, 0.15);
+            --primary-accent: #00f2fe;
+            --danger-accent: #ff0844;
+            --text-main: #ffffff;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            background-attachment: fixed;
+            background-size: cover;
+            font-family: 'Cairo', sans-serif; 
+            color: var(--text-main); 
+            padding-top: 150px;
+        }
+        
+        header { 
+            background: rgba(0, 0, 0, 0.4); 
+            backdrop-filter: blur(25px); 
+            padding: 15px 5%; 
+            position: fixed; top: 0; width: 100%; z-index: 1000; 
+            border-bottom: 1px solid var(--glass-border);
+            display: flex; justify-content: space-between; align-items: center; 
+        }
+        .logo { font-size: 26px; font-weight: 900; color: #fff; text-decoration: none; }
+        .logo span { color: var(--danger-accent); text-shadow: 0 0 10px var(--danger-accent); }
+        
+        .ticker-wrap { 
+            position: fixed; top: 85px; width: 100%; 
+            background: rgba(255, 8, 68, 0.85); 
+            backdrop-filter: blur(10px);
+            color: #fff; overflow: hidden; height: 40px; 
+            display: flex; align-items: center; z-index: 999;
+        }
+        .ticker-title { background: #000; padding: 0 20px; font-weight: 900; z-index: 2; height: 100%; display: flex; align-items: center; font-size: 13px; }
+        .ticker-scroll { white-space: nowrap; animation: scroll 60s linear infinite; }
+        @keyframes scroll { 0% { transform: translateX(100%); } 100% { transform: translateX(-250%); } }
+
+        .container { max-width: 1250px; margin: 0 auto 50px; padding: 0 20px; display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 30px; }
+        
+        .glass-card { 
+            background: var(--glass-bg); 
+            backdrop-filter: blur(20px);
+            border-radius: 25px; overflow: hidden; 
+            transition: 0.4s; 
+            border: 1px solid var(--glass-border); 
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+        .glass-card:hover { transform: scale(1.03); border-color: var(--primary-accent); }
+        
+        .badge { position: absolute; top: 15px; left: 15px; background: var(--danger-accent); color: #fff; padding: 4px 15px; font-size: 11px; font-weight: 700; border-radius: 10px; z-index: 5; }
+        .card-image { height: 210px; overflow: hidden; }
+        .card-image img { width: 100%; height: 100%; object-fit: cover; }
+        
+        .card-content { padding: 25px; }
+        .card-title { font-size: 19px; font-weight: 700; color: #fff; margin-bottom: 12px; line-height: 1.5; }
+        .card-snippet { font-size: 13px; color: #ccc; margin-bottom: 20px; }
+        
+        .meta-data { display: flex; justify-content: space-between; font-size: 11px; color: var(--primary-accent); margin-bottom: 20px; border-top: 1px solid var(--glass-border); padding-top: 15px; }
+        
+        .action-area { display: flex; gap: 10px; }
+        .btn-prime { flex: 2; background: linear-gradient(90deg, #ff0844, #ffb199); color: #fff; text-decoration: none; text-align: center; padding: 12px; border-radius: 12px; font-weight: 700; }
+        .btn-outline { flex: 1; background: rgba(255,255,255,0.05); color: #fff; text-decoration: none; text-align: center; padding: 12px; border-radius: 12px; font-size: 12px; border: 1px solid var(--glass-border); }
+        
+        .ad-slot-wrapper { grid-column: 1 / -1; display: flex; justify-content: center; padding: 20px; background: rgba(255,255,255,0.02); border-radius: 20px; border: 1px dashed var(--glass-border); }
+        
+        footer { text-align: center; padding: 40px; color: rgba(255,255,255,0.4); font-size: 12px; border-top: 1px solid var(--glass-border); }
+        
+        @media (max-width: 600px) { .container { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+    <script type="text/javascript" src="//data527.click/129ba2282fccd3392338/b1a648bd38/?placementName=default"></script> <header>
+        <a href="#" class="logo">الحدث <span>24</span></a>
+        <div style="font-size: 12px; letter-spacing: 1px;">📅 2026-03-09</div>
+    </header>
+
+    <div class="ticker-wrap">
+        <div class="ticker-title">أهم الأنباء</div>
+        <div class="ticker-scroll">وزير الحرب الأمريكي: لم نبدأ بعد مرحلة استخدام القنابل الثقيلة ومراسم الاستسلام متروكة للإيرانيين • إعلام: سماع دوي انفجارات في العاصمة القطرية الدوحة • لحظة إطلاق صواريخ الموجة 30 من عملية "الوعد الصادق 4" (فيديو) • دميترييف: تجاوز سعر برميل النفط  100 دولار يجعل صوت روسيا "مسموعا" عالميا وأوروبا ستدفع ثمنا باهظا • خسائر بمليارات الدولارات.. مسؤول في وزارة المالية الإسرائيلية يكشف كلفة أسبوع واحد من الإغلاق • "18 عملية نوعية جديدة".. "حزب الله" ينشر ملخص عملياته بالصواريخ والمسيرات على إسرائيل • "الموجة 30".. الحرس الثوري الإيراني يقصف إسرائيل وأهدافا أمريكية بالصواريخ والمسيرات الاستراتيجية • "نيويورك تايمز": الخارجية الأمريكية تأمر دبلوماسييها بمغادرة السعودية فورا • ليندسي غراهام: مجتبى خامنئي ليس التغيير الذي نريده ومصيره كوالده • الإمارات.. حريق في حقل نفطي بالفجيرة نتيجة سقوط حطام بعد اعتراض جوي • فقدان آلاف العسكريين الأوكرانيين أثناء عبورهم "نهر الموت" بالقرب من فولتشانسك • الخارجية اللبنانية تدين بشدة هجمات حزب الله على جزيرة قبرص</div>
+    </div>
+
+    <main class="container">
+        
+            <article class="glass-card">
+                <div class="badge">حصري</div>
+                <div class="card-image">
+                    <a href="https://data527.click/21330bf1d025d41336e6/57154ac610/?placementName=default" target="_blank">
+                        <img src="https://mf.b37mrtl.ru/media/pics/2026.03/thumbnail/69ae1a1b42360469687e3cd3.jpg" loading="lazy" alt="news">
+                    </a>
+                </div>
+                <div class="card-content">
+                    <h2 class="card-title">وزير الحرب الأمريكي: لم نبدأ بعد مرحلة استخدام القنابل الثقيلة ومراسم الاستسلام متروكة للإيرانيين</h2>
+                    <p class="card-snippet">
+         قال وزير الحرب الأمريكي بيت هيغسيث خلال مقابلة مع شبكة "سي بي إس" يوم الاثنين، إن الولايات المتحدة ل...</p>
+                    <div class="meta-data">
+                        <span>🕒 02:27 AM</span>
+                        <span class="trending-fire">🔥 عاجل</span>
+                    </div>
+                    <div class="action-area">
+                        <a href="https://data527.click/21330bf1d025d41336e6/57154ac610/?placementName=default" target="_blank" class="btn-prime">التفاصيل الكاملة</a>
+                        <a href="https://arabic.rt.com/world/1765428-%D9%88%D8%B2%D9%8A%D8%B1-%D8%A7%D9%84%D8%AD%D8%B1%D8%A8-%D8%A7%D9%84%D8%A3%D9%85%D8%B1%D9%8A%D9%83%D9%8A-%D9%84%D9%85-%D9%86%D8%A8%D8%AF%D8%A3-%D8%A8%D8%B9%D8%AF-%D9%85%D8%B1%D8%AD%D9%84%D8%A9-%D8%A7%D8%B3%D8%AA%D8%AE%D8%AF%D8%A7%D9%85-%D8%A7%D9%84%D9%82%D9%86%D8%A7%D8%A8%D9%84-%D8%A7%D9%84%D8%AB%D9%82%D9%8A%D9%84%D8%A9-%D9%88%D9%85%D8%B1%D8%A7%D8%B3%D9%85-%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D8%B3%D9%84%D8%A7%D9%85-%D9%85%D8%AA%D8%B1%D9%88%D9%83%D8%A9-%D9%84%D9%84%D8%A5%D9%8A%D8%B1%D8%A7%D9%86%D9%8A%D9%8A%D9%86/" target="_blank" class="btn-outline">المصدر</a>
+                    </div>
+                </div>
+            </article>
+            <article class="glass-card">
+                <div class="badge">حصري</div>
+                <div class="card-image">
+                    <a href="https://data527.click/21330bf1d025d41336e6/57154ac610/?placementName=default" target="_blank">
+                        <img src="https://mf.b37mrtl.ru/media/pics/2026.03/thumbnail/69ae16ac4c59b76fe4787df2.jpg" loading="lazy" alt="news">
+                    </a>
+                </div>
+                <div class="card-content">
+                    <h2 class="card-title">إعلام: سماع دوي انفجارات في العاصمة القطرية الدوحة</h2>
+                    <p class="card-snippet">
+         أفادت وكالة "رويترز" نقلا عن شهود عيان، الاثنين، بسماع دوي انفجارات في العاصمة القطرية الدوحة، دون ت...</p>
+                    <div class="meta-data">
+                        <span>🕒 02:27 AM</span>
+                        <span class="trending-fire">🔥 عاجل</span>
+                    </div>
+                    <div class="action-area">
+                        <a href="https://data527.click/21330bf1d025d41336e6/57154ac610/?placementName=default" target="_blank" class="btn-prime">التفاصيل الكاملة</a>
+                        <a href="https://arabic.rt.com/middle_east/1765427-%D8%A5%D8%B9%D9%84%D8%A7%D9%85-%D8%AF%D9%88%D9%8A-%D8%A7%D9%86%D9%81%D8%AC%D8%A7%D8%B1%D8%A7%D8%AA-%D9%81%D9%8A-%D8%A7%D9%84%D8%B9%D8%A7%D8%B5%D9%85%D8%A9-%D8%A7%D9%84%D9%82%D8%B7%D8%B1%D9%8A%D8%A9-%D8%A7%D9%84%D8%AF%D9%88%D8%AD%D8%A9/" target="_blank" class="btn-outline">المصدر</a>
+                    </div>
+                </div>
+            </article>
+            <article class="glass-card">
+                <div class="badge">حصري</div>
+                <div class="card-image">
+                    <a href="https://data527.click/21330bf1d025d41336e6/57154ac610/?placementName=default" target="_blank">
+                        <img src="https://mf.b37mrtl.ru/media/pics/2026.03/thumbnail/69ae148f4c59b773b0598a86.png" loading="lazy" alt="news">
+                    </a>
+                </div>
+                <div class="card-content">
+                    <h2 class="card-title">لحظة إطلاق صواريخ الموجة 30 من عملية "الوعد الصادق 4" (فيديو)</h2>
+                    <p class="card-snippet">
+         أظهرت مقاطع فيديو لحظة إطلاق الحرس الثوري الإيراني لصواريخ خرمشهر وفتاح وخيبر، خلال الموجة الثلاثين ...</p>
+                    <div class="meta-data">
+                        <span>🕒 02:27 AM</span>
+                        <span class="trending-fire">🔥 عاجل</span>
+                    </div>
+                    <div class="action-area">
+                        <a href="https://data527.click/21330bf1d025d41336e6/57154ac610/?placementName=default" target="_blank" class="btn-prime">التفاصيل الكاملة</a>
+                        <a href="https://arabic.rt.com/world/1765426-%D9%84%D8%AD%D8%B8%D8%A9-%D8%A5%D8%B7%D9%84%D8%A7%D9%82-%D8%B5%D9%88%D8%A7%D8%B1%D9%8A%D8%AE-%D8%A7%D9%84%D9%85%D9%88%D8%AC%D8%A9-30-%D9%85%D9%86-%D8%B9%D9%85%D9%84%D9%8A%D8%A9-%D8%A7%D9%84%D9%88%D8%B9%D8%AF-%D8%A7%D9%84%D8%B5%D8%A7%D8%AF%D9%82-4-%D9%81%D9%8A%D8%AF%D9%8A%D9%88/" target="_blank" class="btn-outline">المصدر</a>
+                    </div>
+                </div>
+            </article>
+            <article class="glass-card">
+                <div class="badge">خبر</div>
+                <div class="card-image">
+                    <a href="https://data527.click/21330bf1d025d41336e6/57154ac610/?placementName=default" target="_blank">
+                        <img src="https://mf.b37mrtl.ru/media/pics/2026.03/thumbnail/69ae135d4c59b771581a8073.jpg" loading="lazy" alt="news">
+                    </a>
+                </div>
+                <div class="card-content">
+                    <h2 class="card-title">دميترييف: تجاوز سعر برميل النفط  100 دولار يجعل صوت روسيا "مسموعا" عالميا وأوروبا ستدفع ثمنا باهظا</h2>
+                    <p class="card-snippet">
+         صرح رئيس صندوق الاستثمار المباشر الروسي كيريل دميترييف بأن ارتفاع أسعار النفط فوق 100 دولار للبرميل ...</p>
+                    <div class="meta-data">
+                        <span>🕒 02:27 AM</span>
+                        <span class="trending-fire">🔥 عاجل</span>
+                    </div>
+                    <div class="action-area">
+                        <a href="https://data527.click/21330bf1d025d41336e6/57154ac610/?placementName=default" target="_blank" class="btn-prime">التفاصيل الكاملة</a>
+                        <a href="https://arabic.rt.com/business/1765425-%D8%AF%D9%85%D9%8A%D8%AA%D8%B1%D9%8A%D9%8A%D9%81-%D8%A7%D9%84%D9%86%D9%81%D8%B7-%D9%81%D9%88%D9%82-100-%D8%AF%D9%88%D9%84%D8%A7%D8%B1-%D9%8A%D8%AC%D8%B9%D9%84-%D8%B5%D9%88%D8%AA-%D8%B1%D9%88%D8%B3%D9%8A%D8%A7-%D9%85%D8%B3%D9%85%D9%88%D8%B9%D8%A7-%D8%B9%D8%A7%D9%84%D9%85%D9%8A%D8%A7-%D9%88%D8%A3%D9%88%D8%B1%D9%88%D8%A8%D8%A7-%D8%B3%D8%AA%D8%AF%D9%81%D8%B9-%D8%AB%D9%85%D9%86%D8%A7-%D8%A8%D8%A7%D9%87%D8%B8%D8%A7/" target="_blank" class="btn-outline">المصدر</a>
+                    </div>
+                </div>
+            </article>
+                <div class="ad-slot-wrapper">
+                    <ins style="width: 300px;height:250px" data-width="300" data-height="250" class="g2fb0b4c321" data-domain="//data527.click" data-affquery="/e3435b2a507722939b6f/2fb0b4c321/?placementName=default"><script src="//data527.click/js/responsive.js" async></script></ins>
+                </div>
+            <article class="glass-card">
+                <div class="badge">خبر</div>
+                <div class="card-image">
+                    <a href="https://data527.click/21330bf1d025d41336e6/57154ac610/?placementName=default" target="_blank">
+                        <img src="https://mf.b37mrtl.ru/media/pics/2026.03/thumbnail/69ae160e4c59b772e570e428.jpg" loading="lazy" alt="news">
+                    </a>
+                </div>
+                <div class="card-content">
+                    <h2 class="card-title">خسائر بمليارات الدولارات.. مسؤول في وزارة المالية الإسرائيلية يكشف كلفة أسبوع واحد من الإغلاق</h2>
+                    <p class="card-snippet">
+         نقلت وكالة "بلومبيرغ" عن مسؤول في وزارة المالية الإسرائيلية قوله إن تل أبيب تتوقع أن تبلغ كلفة أسبوع...</p>
+                    <div class="meta-data">
+                        <span>🕒 02:27 AM</span>
+                        <span class="trending-fire">🔥 عاجل</span>
+                    </div>
+                    <div class="action-area">
+                        <a href="https://data527.click/21330bf1d025d41336e6/57154ac610/?placementName=default" target="_blank" class="btn-prime">التفاصيل الكاملة</a>
+                        <a href="https://arabic.rt.com/business/1765324-%D9%85%D8%B3%D8%A4%D9%88%D9%84-%D9%81%D9%8A-%D9%88%D8%B2%D8%A7%D8%B1%D8%A9-%D8%A7%D9%84%D9%85%D8%A7%D9%84%D9%8A%D8%A9-%D8%A7%D9%84%D8%A5%D8%B3%D8%B1%D8%A7%D8%A6%D9%8A%D9%84%D9%8A%D8%A9-%D9%8A%D9%83%D8%B4%D9%81-%D9%83%D9%84%D9%81%D8%A9-%D8%A3%D8%B3%D8%A8%D9%88%D8%B9-%D9%88%D8%A7%D8%AD%D8%AF-%D9%85%D9%86-%D8%A7%D9%84%D8%A5%D8%BA%D9%84%D8%A7%D9%82/" target="_blank" class="btn-outline">المصدر</a>
+                    </div>
+                </div>
+            </article>
+            <article class="glass-card">
+                <div class="badge">خبر</div>
+                <div class="card-image">
+                    <a href="https://data527.click/21330bf1d025d41336e6/57154ac610/?placementName=default" target="_blank">
+                        <img src="https://mf.b37mrtl.ru/media/pics/2026.03/thumbnail/69ae10214236046a523b41c2.jpg" loading="lazy" alt="news">
+                    </a>
+                </div>
+                <div class="card-content">
+                    <h2 class="card-title">"18 عملية نوعية جديدة".. "حزب الله" ينشر ملخص عملياته بالصواريخ والمسيرات على إسرائيل</h2>
+                    <p class="card-snippet">
+         نشر "حزب الله" اللبناني، فجر اليوم الاثنين، ملخصا لعملياته الجديدة التي نفذها ضد الجيش الإسرائيلي شم...</p>
+                    <div class="meta-data">
+                        <span>🕒 02:27 AM</span>
+                        <span class="trending-fire">🔥 عاجل</span>
+                    </div>
+                    <div class="action-area">
+                        <a href="https://data527.click/21330bf1d025d41336e6/57154ac610/?placementName=default" target="_blank" class="btn-prime">التفاصيل الكاملة</a>
+                        <a href="https://arabic.rt.com/middle_east/1765424-18-%D8%B9%D9%85%D9%84%D9%8A%D8%A9-%D9%86%D9%88%D8%B9%D9%8A%D8%A9-%D8%AC%D8%AF%D9%8A%D8%AF%D8%A9-%D8%AD%D8%B2%D8%A8-%D8%A7%D9%84%D9%84%D9%87-%D9%8A%D9%86%D8%B4%D8%B1-%D9%85%D9%84%D8%AE%D8%B5-%D8%B9%D9%85%D9%84%D9%8A%D8%A7%D8%AA%D9%87-%D8%A7%D9%84%D8%B5%D8%A7%D8%B1%D9%88%D8%AE%D9%8A%D8%A9-%D9%88%D8%A8%D8%A7%D9%84%D9%85%D8%B3%D9%8A%D8%B1%D8%A7%D8%AA-%D8%B9%D9%84%D9%89-%D8%A5%D8%B3%D8%B1%D8%A7%D8%A6%D9%8A%D9%84/" target="_blank" class="btn-outline">المصدر</a>
+                    </div>
+                </div>
+            </article>
+            <article class="glass-card">
+                <div class="badge">خبر</div>
+                <div class="card-image">
+                    <a href="https://data527.click/21330bf1d025d41336e6/57154ac610/?placementName=default" target="_blank">
+                        <img src="https://mf.b37mrtl.ru/media/pics/2026.03/thumbnail/69ae153d4c59b771d540d14c.jpg" loading="lazy" alt="news">
+                    </a>
+                </div>
+                <div class="card-content">
+                    <h2 class="card-title">"الموجة 30".. الحرس الثوري الإيراني يقصف إسرائيل وأهدافا أمريكية بالصواريخ والمسيرات الاستراتيجية</h2>
+                    <p class="card-snippet">
+         أعلن الحرس الثوري الإيراني، فجر الاثنين، استخدام صواريخ "خرمشهر" و"فتح" و"خيبر" وطائرات مسيرة الاستر...</p>
+                    <div class="meta-data">
+                        <span>🕒 02:27 AM</span>
+                        <span class="trending-fire">🔥 عاجل</span>
+                    </div>
+                    <div class="action-area">
+                        <a href="https://data527.click/21330bf1d025d41336e6/57154ac610/?placementName=default" target="_blank" class="btn-prime">التفاصيل الكاملة</a>
+                        <a href="https://arabic.rt.com/world/1765423-%D8%A7%D9%84%D9%85%D9%88%D8%AC%D8%A9-30-%D8%A7%D9%84%D8%AD%D8%B1%D8%B3-%D8%A7%D9%84%D8%AB%D9%88%D8%B1%D9%8A-%D8%A7%D9%84%D8%A5%D9%8A%D8%B1%D8%A7%D9%86%D9%8A-%D9%8A%D9%82%D8%B5%D9%81-%D8%A5%D8%B3%D8%B1%D8%A7%D8%A6%D9%8A%D9%84-%D9%88%D8%A3%D9%87%D8%AF%D8%A7%D9%81%D8%A7-%D8%A3%D9%85%D8%B1%D9%8A%D9%83%D9%8A%D8%A9-%D8%A8%D8%A7%D9%84%D8%B5%D9%88%D8%A7%D8%B1%D9%8A%D8%AE-%D9%88%D8%A7%D9%84%D9%85%D8%B3%D9%8A%D8%B1%D8%A7%D8%AA-%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D8%B1%D8%A7%D8%AA%D9%8A%D8%AC%D9%8A%D8%A9/" target="_blank" class="btn-outline">المصدر</a>
+                    </div>
+                </div>
+            </article>
+            <article class="glass-card">
+                <div class="badge">خبر</div>
+                <div class="card-image">
+                    <a href="https://data527.click/21330bf1d025d41336e6/57154ac610/?placementName=default" target="_blank">
+                        <img src="https://mf.b37mrtl.ru/media/pics/2026.03/thumbnail/69ae088042360424cd05503d.jpg" loading="lazy" alt="news">
+                    </a>
+                </div>
+                <div class="card-content">
+                    <h2 class="card-title">"نيويورك تايمز": الخارجية الأمريكية تأمر دبلوماسييها بمغادرة السعودية فورا</h2>
+                    <p class="card-snippet">
+         أفادت صحيفة "نيويورك تايمز"، نقلا عن مصادر، بأن وزارة الخارجية الأمريكية أمرت جميع الموظفين الأمريكي...</p>
+                    <div class="meta-data">
+                        <span>🕒 02:27 AM</span>
+                        <span class="trending-fire">🔥 عاجل</span>
+                    </div>
+                    <div class="action-area">
+                        <a href="https://data527.click/21330bf1d025d41336e6/57154ac610/?placementName=default" target="_blank" class="btn-prime">التفاصيل الكاملة</a>
+                        <a href="https://arabic.rt.com/world/1765421-%D9%86%D9%8A%D9%88%D9%8A%D9%88%D8%B1%D9%83-%D8%AA%D8%A7%D9%8A%D9%85%D8%B2-%D8%A7%D9%84%D8%AE%D8%A7%D8%B1%D8%AC%D9%8A%D8%A9-%D8%A7%D9%84%D8%A3%D9%85%D8%B1%D9%8A%D9%83%D9%8A%D8%A9-%D8%AA%D8%A3%D9%85%D8%B1-%D8%A7%D9%84%D8%AF%D8%A8%D9%84%D9%88%D9%85%D8%A7%D8%B3%D9%8A%D9%8A%D9%86-%D8%A7%D9%84%D8%A3%D9%85%D8%B1%D9%8A%D9%83%D9%8A%D9%8A%D9%86-%D8%A8%D9%85%D8%BA%D8%A7%D8%AF%D8%B1%D8%A9-%D8%A7%D9%84%D8%B3%D8%B9%D9%88%D8%AF%D9%8A%D8%A9-%D9%81%D9%88%D8%B1%D8%A7/" target="_blank" class="btn-outline">المصدر</a>
+                    </div>
+                </div>
+            </article>
+                <div class="ad-slot-wrapper">
+                    <ins style="width: 300px;height:250px" data-width="300" data-height="250" class="g2fb0b4c321" data-domain="//data527.click" data-affquery="/e3435b2a507722939b6f/2fb0b4c321/?placementName=default"><script src="//data527.click/js/responsive.js" async></script></ins>
+                </div>
+            <article class="glass-card">
+                <div class="badge">خبر</div>
+                <div class="card-image">
+                    <a href="https://data527.click/21330bf1d025d41336e6/57154ac610/?placementName=default" target="_blank">
+                        <img src="https://mf.b37mrtl.ru/media/pics/2026.03/thumbnail/69ae08f942360427dc30eab7.jpg" loading="lazy" alt="news">
+                    </a>
+                </div>
+                <div class="card-content">
+                    <h2 class="card-title">ليندسي غراهام: مجتبى خامنئي ليس التغيير الذي نريده ومصيره كوالده</h2>
+                    <p class="card-snippet">
+         هاجم السيناتور الجمهوري ليندسي غراهام تعيين آية الله السيد مجتبى خامنئي قائدا جديدا للثورة الإيرانية...</p>
+                    <div class="meta-data">
+                        <span>🕒 02:27 AM</span>
+                        <span class="trending-fire">🔥 عاجل</span>
+                    </div>
+                    <div class="action-area">
+                        <a href="https://data527.click/21330bf1d025d41336e6/57154ac610/?placementName=default" target="_blank" class="btn-prime">التفاصيل الكاملة</a>
+                        <a href="https://arabic.rt.com/world/1765422-%D9%84%D9%8A%D9%86%D8%AF%D8%B3%D9%8A-%D8%BA%D8%B1%D8%A7%D9%87%D8%A7%D9%85-%D9%85%D8%AC%D8%AA%D8%A8%D9%89-%D8%AE%D8%A7%D9%85%D9%86%D8%A6%D9%8A-%D9%84%D9%8A%D8%B3-%D8%A7%D9%84%D8%AA%D8%BA%D9%8A%D9%8A%D8%B1-%D8%A7%D9%84%D8%B0%D9%8A-%D9%86%D8%A8%D8%AD%D8%AB-%D8%B9%D9%86%D9%87-%D9%88%D9%85%D8%B5%D9%8A%D8%B1%D9%87-%D8%B3%D9%8A%D9%83%D9%88%D9%86-%D9%85%D8%AB%D9%84-%D9%88%D8%A7%D9%84%D8%AF%D9%87/" target="_blank" class="btn-outline">المصدر</a>
+                    </div>
+                </div>
+            </article>
+            <article class="glass-card">
+                <div class="badge">خبر</div>
+                <div class="card-image">
+                    <a href="https://data527.click/21330bf1d025d41336e6/57154ac610/?placementName=default" target="_blank">
+                        <img src="https://mf.b37mrtl.ru/media/pics/2026.03/thumbnail/69ae051b4c59b76fe4787dec.jpg" loading="lazy" alt="news">
+                    </a>
+                </div>
+                <div class="card-content">
+                    <h2 class="card-title">الإمارات.. حريق في حقل نفطي بالفجيرة نتيجة سقوط حطام بعد اعتراض جوي</h2>
+                    <p class="card-snippet">
+         أعلن المكتب الإعلامي لإمارة الفجيرة في الإمارات العربية المتحدة، الاثنين، عن اندلاع حريق في حقل الفج...</p>
+                    <div class="meta-data">
+                        <span>🕒 02:27 AM</span>
+                        <span class="trending-fire">🔥 عاجل</span>
+                    </div>
+                    <div class="action-area">
+                        <a href="https://data527.click/21330bf1d025d41336e6/57154ac610/?placementName=default" target="_blank" class="btn-prime">التفاصيل الكاملة</a>
+                        <a href="https://arabic.rt.com/middle_east/1765420-%D8%A7%D9%84%D8%A5%D9%85%D8%A7%D8%B1%D8%A7%D8%AA-%D8%AD%D8%B1%D9%8A%D9%82-%D9%81%D9%8A-%D8%AD%D9%82%D9%84-%D9%86%D9%81%D8%B7%D9%8A-%D8%A8%D8%A7%D9%84%D9%81%D8%AC%D9%8A%D8%B1%D8%A9-%D9%86%D8%AA%D9%8A%D8%AC%D8%A9-%D8%B3%D9%82%D9%88%D8%B7-%D8%AD%D8%B7%D8%A7%D9%85-%D8%A8%D8%B9%D8%AF-%D8%A7%D8%B9%D8%AA%D8%B1%D8%A7%D8%B6-%D8%AC%D9%88%D9%8A/" target="_blank" class="btn-outline">المصدر</a>
+                    </div>
+                </div>
+            </article>
+            <article class="glass-card">
+                <div class="badge">خبر</div>
+                <div class="card-image">
+                    <a href="https://data527.click/21330bf1d025d41336e6/57154ac610/?placementName=default" target="_blank">
+                        <img src="https://mf.b37mrtl.ru/media/pics/2026.03/thumbnail/69adfc834c59b76dcb758eef.jpg" loading="lazy" alt="news">
+                    </a>
+                </div>
+                <div class="card-content">
+                    <h2 class="card-title">فقدان آلاف العسكريين الأوكرانيين أثناء عبورهم "نهر الموت" بالقرب من فولتشانسك</h2>
+                    <p class="card-snippet">
+         قال مصدر أمني روسي إن القوات الأوكرانية تكبدت خسائر فادحة في الأفراد قرب مدينة فولتشانسك بمقاطعة خار...</p>
+                    <div class="meta-data">
+                        <span>🕒 02:27 AM</span>
+                        <span class="trending-fire">🔥 عاجل</span>
+                    </div>
+                    <div class="action-area">
+                        <a href="https://data527.click/21330bf1d025d41336e6/57154ac610/?placementName=default" target="_blank" class="btn-prime">التفاصيل الكاملة</a>
+                        <a href="https://arabic.rt.com/world/1765413-%D9%81%D9%82%D8%AF%D8%A7%D9%86-%D8%A2%D9%84%D8%A7%D9%81-%D8%A7%D9%84%D8%B9%D8%B3%D9%83%D8%B1%D9%8A%D9%8A%D9%86-%D8%A7%D9%84%D8%A3%D9%88%D9%83%D8%B1%D8%A7%D9%86%D9%8A%D9%8A%D9%86-%D8%A3%D8%AB%D9%86%D8%A7%D8%A1-%D8%B9%D8%A8%D9%88%D8%B1%D9%87%D9%85-%D9%86%D9%87%D8%B1-%D8%A7%D9%84%D9%85%D9%88%D8%AA-%D8%A8%D8%A7%D9%84%D9%82%D8%B1%D8%A8-%D9%85%D9%86-%D9%81%D9%88%D9%84%D8%AA%D8%B4%D8%A7%D9%86%D8%B3%D9%83/" target="_blank" class="btn-outline">المصدر</a>
+                    </div>
+                </div>
+            </article>
+            <article class="glass-card">
+                <div class="badge">خبر</div>
+                <div class="card-image">
+                    <a href="https://data527.click/21330bf1d025d41336e6/57154ac610/?placementName=default" target="_blank">
+                        <img src="https://mf.b37mrtl.ru/media/pics/2026.03/thumbnail/69adff7b4c59b771530a6baa.jpg" loading="lazy" alt="news">
+                    </a>
+                </div>
+                <div class="card-content">
+                    <h2 class="card-title">الخارجية اللبنانية تدين بشدة هجمات حزب الله على جزيرة قبرص</h2>
+                    <p class="card-snippet">
+         أعلنت سلطات لبنان، في بيان صدر عن وزير الخارجية اللبناني يوسف رجي، عن  إدانتها الشديدة للهجمات التي ...</p>
+                    <div class="meta-data">
+                        <span>🕒 02:27 AM</span>
+                        <span class="trending-fire">🔥 عاجل</span>
+                    </div>
+                    <div class="action-area">
+                        <a href="https://data527.click/21330bf1d025d41336e6/57154ac610/?placementName=default" target="_blank" class="btn-prime">التفاصيل الكاملة</a>
+                        <a href="https://arabic.rt.com/middle_east/1765416-%D8%A7%D9%84%D8%AE%D8%A7%D8%B1%D8%AC%D9%8A%D8%A9-%D8%A7%D9%84%D9%84%D8%A8%D9%86%D8%A7%D9%86%D9%8A%D8%A9-%D8%AA%D8%AF%D9%8A%D9%86-%D8%A8%D8%B4%D8%AF%D8%A9-%D9%87%D8%AC%D9%85%D8%A7%D8%AA-%D8%AD%D8%B2%D8%A8-%D8%A7%D9%84%D9%84%D9%87-%D8%B9%D9%84%D9%89-%D8%AC%D8%B2%D9%8A%D9%89-%D9%82%D8%A8%D8%B1%D8%B5/" target="_blank" class="btn-outline">المصدر</a>
+                    </div>
+                </div>
+            </article>
+                <div class="ad-slot-wrapper">
+                    <ins style="width: 300px;height:250px" data-width="300" data-height="250" class="g2fb0b4c321" data-domain="//data527.click" data-affquery="/e3435b2a507722939b6f/2fb0b4c321/?placementName=default"><script src="//data527.click/js/responsive.js" async></script></ins>
+                </div>
+            <article class="glass-card">
+                <div class="badge">خبر</div>
+                <div class="card-image">
+                    <a href="https://data527.click/21330bf1d025d41336e6/57154ac610/?placementName=default" target="_blank">
+                        <img src="https://mf.b37mrtl.ru/media/pics/2026.03/thumbnail/69ae0b1142360425b7447fdc.jpg" loading="lazy" alt="news">
+                    </a>
+                </div>
+                <div class="card-content">
+                    <h2 class="card-title">إعلام إيراني: الحرس الثوري يطلق أول موجة صاروخية بعد تنصيب المرشد الجديد</h2>
+                    <p class="card-snippet">
+         أفادت وسائل إعلام إيرانية، الاثنين، بأن الحرس الثوري الإسلامي أطلق أول موجة صاروخية بعد تنصيب المرشد...</p>
+                    <div class="meta-data">
+                        <span>🕒 02:27 AM</span>
+                        <span class="trending-fire">🔥 عاجل</span>
+                    </div>
+                    <div class="action-area">
+                        <a href="https://data527.click/21330bf1d025d41336e6/57154ac610/?placementName=default" target="_blank" class="btn-prime">التفاصيل الكاملة</a>
+                        <a href="https://arabic.rt.com/world/1765419-%D8%A5%D8%B9%D9%84%D8%A7%D9%85-%D8%A5%D9%8A%D8%B1%D8%A7%D9%86%D9%8A-%D8%A7%D9%84%D8%AD%D8%B1%D8%B3-%D8%A7%D9%84%D8%AB%D9%88%D8%B1%D9%8A-%D9%8A%D8%B7%D9%84%D9%82-%D8%A3%D9%88%D9%84-%D9%85%D9%88%D8%AC%D8%A9-%D8%B5%D8%A7%D8%B1%D9%88%D8%AE%D9%8A%D8%A9-%D8%A8%D8%B9%D8%AF-%D8%AA%D9%86%D8%B5%D9%8A%D8%A8-%D8%A7%D9%84%D9%85%D8%B1%D8%B4%D8%AF-%D8%A7%D9%84%D8%AC%D8%AF%D9%8A%D8%AF/" target="_blank" class="btn-outline">المصدر</a>
+                    </div>
+                </div>
+            </article>
+            <article class="glass-card">
+                <div class="badge">خبر</div>
+                <div class="card-image">
+                    <a href="https://data527.click/21330bf1d025d41336e6/57154ac610/?placementName=default" target="_blank">
+                        <img src="https://mf.b37mrtl.ru/media/pics/2026.03/thumbnail/69adf96a4c59b779fd145904.jpg" loading="lazy" alt="news">
+                    </a>
+                </div>
+                <div class="card-content">
+                    <h2 class="card-title">تشويش أو أعطال.. نحو 1000 سفينة فقدت إشارات "GPS" في الشرق الأوسط</h2>
+                    <p class="card-snippet">
+         تعرضت نحو 1000 سفينة في المنطقة للتشويش أو أعطال في إشارات الملاحة منذ بدء الحرب في الشرق الأوسط. 
+ ...</p>
+                    <div class="meta-data">
+                        <span>🕒 02:27 AM</span>
+                        <span class="trending-fire">🔥 عاجل</span>
+                    </div>
+                    <div class="action-area">
+                        <a href="https://data527.click/21330bf1d025d41336e6/57154ac610/?placementName=default" target="_blank" class="btn-prime">التفاصيل الكاملة</a>
+                        <a href="https://arabic.rt.com/technology/1765369-%D8%AA%D8%B4%D9%88%D9%8A%D8%B4-%D8%A3%D9%88-%D8%A3%D8%B9%D8%B7%D8%A7%D9%84-%D9%86%D8%AD%D9%88-1000-%D8%B3%D9%81%D9%8A%D9%86%D8%A9-%D9%81%D9%82%D8%AF%D8%AA-%D8%A5%D8%B4%D8%A7%D8%B1%D8%A7%D8%AA-gps-%D9%81%D9%8A-%D8%A7%D9%84%D8%B4%D8%B1%D9%82-%D8%A7%D9%84%D8%A3%D9%88%D8%B3%D8%B7/" target="_blank" class="btn-outline">المصدر</a>
+                    </div>
+                </div>
+            </article>
+            <article class="glass-card">
+                <div class="badge">خبر</div>
+                <div class="card-image">
+                    <a href="https://data527.click/21330bf1d025d41336e6/57154ac610/?placementName=default" target="_blank">
+                        <img src="https://mf.b37mrtl.ru/media/pics/2026.03/thumbnail/69ae0585423604267d4b1524.jpg" loading="lazy" alt="news">
+                    </a>
+                </div>
+                <div class="card-content">
+                    <h2 class="card-title">إعلام تابع لحزب الله: الحزب يتمكن من إصابة إحدى المروحيات الإسرائيلية المتسللة شرق لبنان</h2>
+                    <p class="card-snippet">
+         أكدت وسائل إعلام تابعة لحزب الله أن الحزب تمكن من إصابة إحدى المروحيات الإسرائيلية المتسللة شرق لبنا...</p>
+                    <div class="meta-data">
+                        <span>🕒 02:27 AM</span>
+                        <span class="trending-fire">🔥 عاجل</span>
+                    </div>
+                    <div class="action-area">
+                        <a href="https://data527.click/21330bf1d025d41336e6/57154ac610/?placementName=default" target="_blank" class="btn-prime">التفاصيل الكاملة</a>
+                        <a href="https://arabic.rt.com/middle_east/1765418-%D8%A5%D8%B9%D9%84%D8%A7%D9%85-%D8%AA%D8%A7%D8%A8%D8%B9-%D9%84%D8%AD%D8%B2%D8%A8-%D8%A7%D9%84%D9%84%D9%87-%D8%A7%D9%84%D8%AD%D8%B2%D8%A8-%D9%8A%D8%AA%D9%85%D9%83%D9%86-%D9%85%D9%86-%D8%A5%D8%B5%D8%A7%D8%A8%D8%A9-%D8%A5%D8%AD%D8%AF%D9%89-%D8%A7%D9%84%D9%85%D8%B1%D9%88%D8%AD%D9%8A%D8%A7%D8%AA-%D8%A7%D9%84%D8%A5%D8%B3%D8%B1%D8%A7%D8%A6%D9%8A%D9%84%D9%8A%D8%A9-%D8%A7%D9%84%D9%85%D8%AA%D8%B3%D9%84%D9%84%D8%A9-%D8%B4%D8%B1%D9%82-%D9%84%D8%A8%D9%86%D8%A7%D9%86/" target="_blank" class="btn-outline">المصدر</a>
+                    </div>
+                </div>
+            </article>
+            <article class="glass-card">
+                <div class="badge">خبر</div>
+                <div class="card-image">
+                    <a href="https://data527.click/21330bf1d025d41336e6/57154ac610/?placementName=default" target="_blank">
+                        <img src="https://mf.b37mrtl.ru/media/pics/static.ar/thumbnail/breaking_red.jpg" loading="lazy" alt="news">
+                    </a>
+                </div>
+                <div class="card-content">
+                    <h2 class="card-title">لحظة بلحظة.. غارات إسرائيلية متواصلة على لبنان وحزب الله يشتبك مع القوات الإسرائيلية في الجنوب</h2>
+                    <p class="card-snippet">
+         يتواصل القصف الإسرائيلي على لبنان، الأحد، خصوصا في جنوب وشرق لبنان وفي ضاحية بيروت، فيما يؤكد حزب ال...</p>
+                    <div class="meta-data">
+                        <span>🕒 02:27 AM</span>
+                        <span class="trending-fire">🔥 عاجل</span>
+                    </div>
+                    <div class="action-area">
+                        <a href="https://data527.click/21330bf1d025d41336e6/57154ac610/?placementName=default" target="_blank" class="btn-prime">التفاصيل الكاملة</a>
+                        <a href="https://arabic.rt.com/middle_east/1765093-%D9%84%D8%AD%D8%B8%D8%A9-%D8%A8%D9%84%D8%AD%D8%B8%D8%A9-%D8%BA%D8%A7%D8%B1%D8%A7%D8%AA-%D8%A5%D8%B3%D8%B1%D8%A7%D8%A6%D9%8A%D9%84%D9%8A%D8%A9-%D9%85%D8%AA%D9%88%D8%A7%D8%B5%D9%84%D8%A9-%D8%B9%D9%84%D9%89-%D9%84%D8%A8%D9%86%D8%A7%D9%86-%D9%88%D8%AD%D8%B2%D8%A8-%D8%A7%D9%84%D9%84%D9%87-%D9%8A%D8%B4%D8%AA%D8%A8%D9%83-%D9%85%D8%B9-%D8%A7%D9%84%D9%82%D9%88%D8%A7%D8%AA-%D8%A7%D9%84%D8%A5%D8%B3%D8%B1%D8%A7%D8%A6%D9%8A%D9%84%D9%8A%D8%A9-%D9%81%D9%8A-%D8%A7%D9%84%D8%AC%D9%86%D9%88%D8%A8/" target="_blank" class="btn-outline">المصدر</a>
+                    </div>
+                </div>
+            </article>
+                <div class="ad-slot-wrapper">
+                    <ins style="width: 300px;height:250px" data-width="300" data-height="250" class="g2fb0b4c321" data-domain="//data527.click" data-affquery="/e3435b2a507722939b6f/2fb0b4c321/?placementName=default"><script src="//data527.click/js/responsive.js" async></script></ins>
+                </div>
+            <article class="glass-card">
+                <div class="badge">خبر</div>
+                <div class="card-image">
+                    <a href="https://data527.click/21330bf1d025d41336e6/57154ac610/?placementName=default" target="_blank">
+                        <img src="https://mf.b37mrtl.ru/media/pics/2026.03/thumbnail/69adfe0242360423d40db3d6.jpg" loading="lazy" alt="news">
+                    </a>
+                </div>
+                <div class="card-content">
+                    <h2 class="card-title">"رويترز": العقود الآجلة للخام الأمريكي تصعد بأكثر من 20% إلى 111 دولارا للبرميل</h2>
+                    <p class="card-snippet">
+         ذكرت وكالة "رويترز" أن العقود الآجلة للخام الأمريكي ارتفعت بشكل حاد، متجاوزة نسبة 20% لتصل إلى مستوي...</p>
+                    <div class="meta-data">
+                        <span>🕒 02:27 AM</span>
+                        <span class="trending-fire">🔥 عاجل</span>
+                    </div>
+                    <div class="action-area">
+                        <a href="https://data527.click/21330bf1d025d41336e6/57154ac610/?placementName=default" target="_blank" class="btn-prime">التفاصيل الكاملة</a>
+                        <a href="https://arabic.rt.com/business/1765415-%D8%B1%D9%88%D9%8A%D8%AA%D8%B1%D8%B2-%D8%A7%D9%84%D8%B9%D9%82%D9%88%D8%AF-%D8%A7%D9%84%D8%A2%D8%AC%D9%84%D8%A9-%D9%84%D9%84%D8%AE%D8%A7%D9%85-%D8%A7%D9%84%D8%A3%D9%85%D8%B1%D9%8A%D9%83%D9%8A-%D8%AA%D8%B5%D8%B9%D8%AF-%D8%A8%D8%A3%D9%83%D8%AB%D8%B1-%D9%85%D9%86-20-%D8%A5%D9%84%D9%89-111-%D8%AF%D9%88%D9%84%D8%A7%D8%B1-%D9%84%D9%84%D8%A8%D8%B1%D9%85%D9%8A%D9%84/" target="_blank" class="btn-outline">المصدر</a>
+                    </div>
+                </div>
+            </article>
+            <article class="glass-card">
+                <div class="badge">خبر</div>
+                <div class="card-image">
+                    <a href="https://data527.click/21330bf1d025d41336e6/57154ac610/?placementName=default" target="_blank">
+                        <img src="https://mf.b37mrtl.ru/media/pics/2026.03/thumbnail/69adfd54423604267d4b151c.jpg" loading="lazy" alt="news">
+                    </a>
+                </div>
+                <div class="card-content">
+                    <h2 class="card-title">أول رد فعل إسرائيلي على اختيار إيران مجتبى خامنئي مرشدا أعلى</h2>
+                    <p class="card-snippet">
+         نشر رئيس الكنيست الإسرائيلي أمير أوحانا تغريدة عبر منصة "إكس" هدد فيها مجتبى خامنئي مباشرة بعد تعيين...</p>
+                    <div class="meta-data">
+                        <span>🕒 02:27 AM</span>
+                        <span class="trending-fire">🔥 عاجل</span>
+                    </div>
+                    <div class="action-area">
+                        <a href="https://data527.click/21330bf1d025d41336e6/57154ac610/?placementName=default" target="_blank" class="btn-prime">التفاصيل الكاملة</a>
+                        <a href="https://arabic.rt.com/world/1765414-%D8%A3%D9%88%D9%84-%D8%B1%D8%AF-%D9%81%D8%B9%D9%84-%D8%A5%D8%B3%D8%B1%D8%A7%D8%A6%D9%8A%D9%84%D9%8A-%D8%B9%D9%84%D9%89-%D8%A7%D8%AE%D8%AA%D9%8A%D8%A7%D8%B1-%D8%A5%D9%8A%D8%B1%D8%A7%D9%86-%D9%85%D8%AC%D8%AA%D8%A8%D9%89-%D8%AE%D8%A7%D9%85%D9%86%D8%A6%D9%8A-%D9%85%D8%B1%D8%B4%D8%AF%D8%A7-%D8%A3%D8%B9%D9%84%D9%89/" target="_blank" class="btn-outline">المصدر</a>
+                    </div>
+                </div>
+            </article>
+            <article class="glass-card">
+                <div class="badge">خبر</div>
+                <div class="card-image">
+                    <a href="https://data527.click/21330bf1d025d41336e6/57154ac610/?placementName=default" target="_blank">
+                        <img src="https://mf.b37mrtl.ru/media/pics/static.ar/thumbnail/breaking_red.jpg" loading="lazy" alt="news">
+                    </a>
+                </div>
+                <div class="card-content">
+                    <h2 class="card-title">لحظة بلحظة.. الحرب الأمريكية-الإسرائيلية على إيران بيومها التاسع: تصعيد متواصل يهز الشرق الأوسط</h2>
+                    <p class="card-snippet">
+         في يومها التاسع تشهد الحرب على إيران تصعيدا ينسحب على الشرق الأوسط حيث تواصل واشنطن وتل أبيب ضرب أهد...</p>
+                    <div class="meta-data">
+                        <span>🕒 02:27 AM</span>
+                        <span class="trending-fire">🔥 عاجل</span>
+                    </div>
+                    <div class="action-area">
+                        <a href="https://data527.click/21330bf1d025d41336e6/57154ac610/?placementName=default" target="_blank" class="btn-prime">التفاصيل الكاملة</a>
+                        <a href="https://arabic.rt.com/world/1765090-%D9%84%D8%AD%D8%B8%D8%A9-%D8%A8%D9%84%D8%AD%D8%B8%D8%A9-%D8%A7%D9%84%D8%AD%D8%B1%D8%A8-%D8%A7%D9%84%D8%A3%D9%85%D8%B1%D9%8A%D9%83%D9%8A%D8%A9-%D8%A7%D9%84%D8%A5%D8%B3%D8%B1%D8%A7%D8%A6%D9%8A%D9%84%D9%8A%D8%A9-%D8%B9%D9%84%D9%89-%D8%A5%D9%8A%D8%B1%D8%A7%D9%86-%D8%A8%D9%8A%D9%88%D9%85%D9%87%D8%A7-%D8%A7%D9%84%D8%AA%D8%A7%D8%B3%D8%B9-%D8%AA%D8%B5%D8%B9%D9%8A%D8%AF-%D9%85%D8%AA%D9%88%D8%A7%D8%B5%D9%84-%D9%8A%D9%87%D8%B2-%D8%A7%D9%84%D8%B4%D8%B1%D9%82-%D8%A7%D9%84%D8%A3%D9%88%D8%B3%D8%B7/" target="_blank" class="btn-outline">المصدر</a>
+                    </div>
+                </div>
+            </article>
+            <article class="glass-card">
+                <div class="badge">خبر</div>
+                <div class="card-image">
+                    <a href="https://data527.click/21330bf1d025d41336e6/57154ac610/?placementName=default" target="_blank">
+                        <img src="https://mf.b37mrtl.ru/media/pics/2026.03/thumbnail/69adffae4c59b773ad415656.jpg" loading="lazy" alt="news">
+                    </a>
+                </div>
+                <div class="card-content">
+                    <h2 class="card-title">الأردن.. ساحة لتداعيات الحروب</h2>
+                    <p class="card-snippet">
+         مع استمرار التصعيد العسكري الأمريكي الإسرائيلي ضد إيران، يجد الأردن نفسه - كغيره من دول الإقليم - في...</p>
+                    <div class="meta-data">
+                        <span>🕒 02:27 AM</span>
+                        <span class="trending-fire">🔥 عاجل</span>
+                    </div>
+                    <div class="action-area">
+                        <a href="https://data527.click/21330bf1d025d41336e6/57154ac610/?placementName=default" target="_blank" class="btn-prime">التفاصيل الكاملة</a>
+                        <a href="https://arabic.rt.com/features/1765360-%D8%A7%D9%84%D8%A3%D8%B1%D8%AF%D9%86-%D8%B3%D8%A7%D8%AD%D8%A9-%D9%84%D8%AA%D8%AF%D8%A7%D8%B9%D9%8A%D8%A7%D8%AA-%D8%A7%D9%84%D8%AD%D8%B1%D9%88%D8%A8/" target="_blank" class="btn-outline">المصدر</a>
+                    </div>
+                </div>
+            </article>
+                <div class="ad-slot-wrapper">
+                    <ins style="width: 300px;height:250px" data-width="300" data-height="250" class="g2fb0b4c321" data-domain="//data527.click" data-affquery="/e3435b2a507722939b6f/2fb0b4c321/?placementName=default"><script src="//data527.click/js/responsive.js" async></script></ins>
+                </div>
+    </main>
+
+    <footer>
+        <p>Alhadath 24 Premium Dashboard &copy; 2026</p>
+    </footer>
+</body>
+</html>
